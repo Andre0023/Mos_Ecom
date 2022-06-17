@@ -1,9 +1,11 @@
 import com.codeborne.selenide.*;
 
+import com.codeborne.selenide.conditions.Text;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.*;
 
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 
@@ -45,6 +47,7 @@ public class PageEco {
         $("[type='radio'][value='Каждый день']").parent().click();
 
         $("[id='quiz-page-id-3']").$(byText("Ответить")).click();
+        $(".quiz-air-quality-inline-form").shouldHave(text("Оставьте комментарий"));
 
 
 
