@@ -12,22 +12,22 @@ public class SendForm {
     private final SelenideElement send1 = $("[id='quiz-page-id-1']").$(byText("Ответить"));
     private final SelenideElement send2 = $("[id='quiz-page-id-2']").$(byText("Ответить"));
     private final SelenideElement send3 = $("[id='quiz-page-id-3']").$(byText("Ответить"));
-    @И("Нажать кнпку Отправить 1.")
+    @И("Нажать кнопку Отправить 1.")
     public void SendFormOne() {
        send0.click();
 
     }
-    @И("Нажать кнпку Отправить 2.")
+    @И("Нажать кнопку Отправить 2.")
     public void SendFormTwo() {
 
         send1.click();
     }
-    @И("Нажать кнпку Отправить 3.")
+    @И("Нажать кнопку Отправить 3.")
     public void SendFormThree() {
 
         send2.click();
     }
-    @И("Нажать кнпку Отправить 4.")
+    @И("Нажать кнопку Отправить 4.")
     public void SendFormFour() {
 
         send3.click();
