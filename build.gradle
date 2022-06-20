@@ -79,13 +79,16 @@ configurations {
     }
 }
 
-tasks.register('cucumber') {
-    dependsOn assemble, testClasses
+task cucumber() {
+    dependsOn assemble, compileTestJava
     doLast {
         javaexec {
-            main = 'io.cucumber.core.cli.Main'
+            main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--glue', 'com.tests', 'src/test/resources']
+            args = ['--plugin', 'pretty', \
+                    '--plugin', 'io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm', \
+                    '--strict', \
+                    '--glue', 'hellocucumber', 'src/test/resources']
         }
     }
 }
