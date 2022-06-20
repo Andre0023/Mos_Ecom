@@ -35,9 +35,11 @@ compileTestJava {
 
 dependencies {
 
+    implementation 'junit:junit:4.13.1'
     testImplementation (
             'io.cucumber:cucumber-java:7.3.3',
             'io.qameta.allure:allure-selenide:2.18.1',
+            'io.qameta.allure:allure-cucumber7-jvm:2.18.1',
             'org.aspectj:aspectjweaver:1.9.5',
             'io.qameta.allure:allure-cucumber-jvm:2.17.3',
             'com.codeborne:selenide:6.6.3',
