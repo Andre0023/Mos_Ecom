@@ -9,13 +9,12 @@ import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import java.nio.charset.StandardCharsets;
 
 public class BeforStep  {
 
-    @Test
+
 
     @BeforeEach
     @Step("Открыть сайт")

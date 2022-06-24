@@ -29,8 +29,6 @@ public class PageEco {
 
         $("[type='radio'][value='Другое']").parent().click();
         $("[name='smell_type_custom']").setValue("Клопы");
-
-
         $("[id='quiz-page-id-1']").$(byText("Ответить")).click();
 
         $("[id='report-date']").click();
