@@ -1,4 +1,6 @@
 import com.codeborne.selenide.Configuration;
+import helpers.Attach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -6,9 +8,18 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class PageEco {
 
+
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+        closeWebDriver();
+    }
 
     @Test
     @DisplayName("Open mosecom.mos.ru")
